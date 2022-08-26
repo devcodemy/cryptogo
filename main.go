@@ -40,11 +40,11 @@ func decrypt(data []byte, passphrase string) []byte {
 }
 
 func main() {
-	passphrase := "asdfgh"
+	passphrase := "SomeP4ssphras3"
 	resultEncrypted := encrypt([]byte("Hello World!"), passphrase)
 	log.Println(hex.EncodeToString(resultEncrypted))
 
-	someEcrypted := "72c1744210164166495701505c892f2d62691b4a8ccd97e000bd73d56d210dcd"
+	someEcrypted := "SOME_ENCRYPTED_LONG_HASH"
 
 	toDecodeString, _ := hex.DecodeString(someEcrypted)
 	resultDecrypted := decrypt(toDecodeString, passphrase)
